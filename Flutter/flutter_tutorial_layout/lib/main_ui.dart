@@ -40,13 +40,16 @@ class _MainUiState extends State<MainUi> {
     // com um preenchimento uniforme de 16 dp em todos os lados.
     // No geral, esse código cria uma interface de usuário simples com campos de texto para entrada de dados,
     // organizados verticalmente em uma coluna, com dois campos adicionais lado a lado em uma linha.
+    //https://api.flutter.dev/flutter/widgets/Padding-class.html
     return const Padding(
       padding: EdgeInsets.all(16),
       // Dentro deste padding, há um Column, que organiza seus filhos verticalmente, neste caso os componentes Widget.
+      //https://api.flutter.dev/flutter/widgets/Column-class.html
       child: Column(
         children: <Widget>[
           // Dentro da Column, há três TextField, cada um com um decoration diferente
           // para exibir um texto de dica dentro do campo.
+          //https://api.flutter.dev/flutter/material/TextField-class.html
           TextField(
             decoration: InputDecoration(hintText: "Nome"),
           ),
@@ -58,6 +61,7 @@ class _MainUiState extends State<MainUi> {
           Row(
             children: <Widget>[
               //Ao utilizar o TextField lembre-se de envolver eles com um container Expanded e
+              // https://api.flutter.dev/flutter/widgets/Expanded-class.html
               Expanded(
                 child: TextField(
                   decoration: InputDecoration(hintText: "RG"),
